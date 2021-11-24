@@ -1,0 +1,77 @@
+body
+{
+    background-color: lightblue;
+}
+
+
+h1
+{
+    color:royalblue;
+    text-align: center;
+}
+p
+{
+    background-color: #336699;
+}
+.middle
+{
+   text-align: center;
+}
+
+#special
+{
+    background-color: pink;
+}
+#startBtn{
+    display:block;
+    text-align:center;
+    margin-block: 100px;
+    
+}
+#toNextRoom1, #toNextRoom2, #toNextRoom3, #toNextRoom4, #toNextRoom5{
+    float:right;
+    margin-top: -80px;
+    margin-right: 20px;
+}
+#skeleton{
+    color:yellow;
+}
+.centerImage
+{
+    display:block;
+    text-align:left;
+    margin-left: 5px;
+}
+.rightImage
+{
+    display:block;
+    text-align:right;
+    margin-left: 800px;
+}
+.leftImage{
+    display:block;
+    text-align:left;
+}
+.rightTopImage
+{
+    display:block;
+    text-align:right;
+    margin-left: 650px;
+    margin-block: -300px;
+    float: inline-end;
+}
+#img1, #img2, #img3,#img4,#img5,#img6, #img7,#img8
+{
+    width:250px;
+    height:250px;
+}
+.listOfObjects{
+    text-align: left;
+    color:white;
+}
+.whiteText{
+    color:white;
+}
+#Jacob, #Osfert, #Robert, #Skeleton{
+    color:white;
+}

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+  <!--Bootstrap css-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Intro  -->
+    <div id="Intro" class="Intro">
+      <div class="row">
+      <div id="header" class="col">
+        <h1>Castle Quest - Text adventure game</h1>
+      </div></div>
+      <div class="row">
+        <div class="col">
+          <div id="descriptionIntro"  class="descriptionIntro"><h4><b>Welcome,</b> adventurer, to  our castle! A new and exciting journey awaits.<br>
+            My name is Josser, the queen's jester.I will join on your quest.In each castle room, you will face different challenges. You will score points when you overcome these challenges!!!<br>
+            <b>The aim of your quest is to score over 900 points in order to win the game.</b><br>
+            Your quest consists in: </h4>
+            <ul>
+              <li><h4>Answering the question that the castellans are asking you. They are not your friends...</h4></li>
+              <li><h4>Choosing one of the two pictures from the right side of the screen to win or lose points.</h4></li>
+            </ul>
+            
+            <img src="imag/castel/Castle.jpg" alt="castle image" class="float-start rounded img-fluid" width="550px">
+            <img src="imag/castel/Jester.jpg" alt="jester image" class="rightTopImage rounded float-end" width="350">
+          </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+            <h5> But first, I, the friendly jester, will help you score some extra points!</h5>
+            <input type="button" value="Start Game"  class="btn btn-block btn-outline-danger" id="startBtn"
+              onclick="showElement('Room1', 'Intro');"/>
+      </div></div></div>
+    </div>
+    <!-- Room 1  -->
+    <div id="Room1"  class="Room1 row">
+      <div id="header1">
+        <h1>The Dungeon</h1>
+      </div>
+      <div  id="descriptionRoom1" class="roomDescription col" ><h5>This is were we hold our prisoners. All the cells are underground.<br>
+        The dungeon is dark, mouldy and lonely. Skelotron is one of our dungeon guards.<br> 
+        He is fierce, merciless and never sleeps.</h5></br>     
+        <input type="button" value="Next Room" id="toNextRoom1" class="btn btn-primary btn-lg"
+          onclick="showElement('Room2', 'Room1')"></button>
+      </div>
+ 
+      <form id="form1">
+      <div class="roomLeft"  id="Room1Left">      
+        <img src="imag/castel/Jester.jpg" alt="jester image" id="JosserR1" class="leftImage" width="400px">
+        <div>
+            <p id="JosserR1" class="whiteText">Choose one item from the list below,<br>let's see how lucky you are!!!
+            </p>
+        </div><br>
+            <label for="charTypeRoom1">Your choice</b></label>
+            <input id="Answer1" name="Answer1" type="text" placeholder="Click Submit once only" value="">
+            <input type="button" value="Submit" onclick="submitCharacter('Answer1','btnChar1','score1')"
+            id="btnChar1" class="btn btn-success" />        
+            </br></br>
+            <div class="listOfObjects">
+            <ul>
+              <li>padlock</li><br>
+              <li>padlock key</li><br>
+              <li>chains</li><br>
+              <li>jug of water</li>
+            </ul></div>
+                  </br></br>
+      </div>
+      <div id="Room1Main" class="roomMain">
+          <h1 style ="color:white">Chat with Skeletron, the Dungeon guard</h1>
+          <p id="skeleton">Adventurer, answer this question to win points: <br>
+          Sam’s mother has five children. March, April, May, June – what is the name of the fifth daughter?
+          </p>
+          
+            <label for="charTypeRoom1">
+              Your answer</b></label>
+            <input id="Answer2" name="Answer2" type="text" value=""/>
+            <input type="button" value="Submit" onclick="submitQuestion('Answer2','btnChar2','score1')"
+            id="btnChar2" class="btn btn-success"/>
+          
+                  </br></br>
+      
+            <img src="imag/castel/the dungeon keeper.jfif" alt="four image one word guessing game" width="275px"
+            height="300" class="rounded">
+      </div>
+      <div id="Room1Right" class="roomRight">Choose carefully!One picture is lucky the other one is not.</br><br>
+            
+            <input id="img1" onclick="clickedPicture('img1','score1')" src="imag/castel/the dungeon.jpg" 
+            alt="dungeon image" type="image" class="rounded"></br></br>
+            <input id="img2" src="imag/castel/Prison-Dungeon.jpg" alt="four image one word guessing game"
+             type="image" class="rounded" onclick="clickedPicture('img2','score1')">
+            </br></br>
+
+            <p class="ScoreX" id="score1">Total score: 0 out of 900 points</p>   
+      </div>
+    </div>
+    <!-- Room 2  -->
+    <div id="Room2" class="Room2">
+      <div id="header2">
+        <h1>The Knights Hall</h1>
+      </div>
+      <div class="roomDescription" id="descriptionRoom2">Welcome to the Knights hall, where our valiant knights meet after battles. <br>
+        They feast, train and sharpen their weapons in this Hall.<br>
+        In this great hall, you can see a big table at which the King himself sits when <br>
+        he joins the knights.<br>
+            
+        <input type="button" value="Next Room" id="toNextRoom2" class="btn btn-primary btn-lg"
+          onclick="showElement('Room3', 'Room2')"></button>
+      </div>
+
+
+      <div class="roomLeft" id="Room2Left">
+        <img src="imag/castel/Jester.jpg" alt="jester image" id="JosserR1" class="leftImage" width="400">
+        <div>
+          <p id="JosserR2" class="whiteText">Choose one item from the list below,<br>let's see how lucky you are!!!
+          </p>
+        </div><br>
+        <label for="charTypeRoom1">Your choice</b></label>
+        <input id="Answer3" name="Answer3" type="text" placeholder="Click Submit once only" value="">
+        <input type="button" value="Submit" onclick="submitCharacter('Answer3','btnChar3','score1')" id="btnChar3"
+          class="btn btn-success" />
+        </br></br>
+        <div class="listOfObjects">
+          <ul>
+            <li>golden dagger</li><br>
+            <li>sharp sword</li><br>
+            <li>kingdom map</li><br>
+            <li>encrusted shield</li>
+          </ul></div>
+        </br></br>
+      </div>
+
+      <div id="Room2Main" class="roomMain">
+        <h1 id="Jacob">Chat with Jacob, our most valued knight.</h1>
+        <div>
+          <p style="color:white">Are you feeling lucky, adventurer? <br>
+            Try finding the answer to this: <br>
+            You dream of this when you are in the desert.<br>
+
+          </p>
+        </div>
+        <div>
+          <label for="charTypeRoom2">
+            Your answer</b></label>
+          <input id="Answer4" name="Answer4"  type="text">
+          <input type="button"  value="Submit"  onclick="submitQuestion('Answer4','btnChar4','score1')"
+           id="btnChar4" class="btn btn-success"/>
+        </div></br></br>
+        </button><img src="imag/castel/knight3.jpg"  alt="four image one word guessing game" class="rounded" 
+        class="rounded" width="250px" height="300">
+      </div>
+
+      <div id="Room2Right" class="roomRight">Pick an image, see how lucky you are today.</br><br>
+        <input id = "img3" type="image" src="imag/castel/knights room.JPG"   alt="four image one word guessing game" 
+        class="rounded" onclick="clickedPicture('img3', 'score1')" width="280px" height="250"></br></br>
+        <input id = "img4" type="image" src="imag/castel/knights room2.JPG"   alt="four image one word guessing game"
+         class="rounded" width="280px" height="250" onclick="clickedPicture('img4', 'score1')"></br></br>
+        <p class="ScoreX" id="score2">Total points: 0 out of 900 to win</p>
+      </div>
+
+    </div>
+    <!-- Room 3  -->
+    <div id="Room3" class="Room3">
+      <div id="header3">
+        <h1>The Chapel</h1>
+      </div>
+      <div class="roomDescription" id="descriptionRoom3">A very warm welcome to our castle chapel!<br>
+        This is our place of worship. The chapel has grand arches and a soft light surrounds you<br>
+        if you come here to pray or attend the sermon. Osfert, our priest, is patient, kind and wise.</br>
+        <br>
+        <input type="button" value="Next Room" id="toNextRoom3" class="btn btn-primary btn-lg"
+          onclick="showElement('Room4', 'Room3')"></button>
+      </div>
+      <div class="roomLeft" id="Room3Left">
+        </br>
+        <img src="imag/castel/Jester.jpg" alt="jester image" id="JosserR1" class="leftImage" width="400px">
+        <div>
+          <p id="JosserR1" class="whiteText">Choose one item from the list below,<br>let's see how lucky you are!!!
+          </p>
+        </div><br>
+        <label for="charTypeRoom1">Your choice</b></label>
+        <input id="Answer1" name="Answer1" type="text" placeholder="Click Submit once only" value="">
+        <input type="button" value="Submit" onclick="submitCharacter('Answer1','btnChar1','score1')" id="btnChar1"
+          class="btn btn-success" />
+        </br></br>
+        <div class="listOfObjects">
+          <ul>
+            <li>golden cross</li><br>
+            <li>ancient scroll</li><br>
+            <li>the bible</li><br>
+            <li>candle</li>
+          </ul>
+        </div>
+        </br></br>
+        
+      </div>
+     
+      <div id="Room3Main" class="roomMain">
+        <h1 id="Osfert" #chatR1:color="white">Chat with Osfert, the chapel priest.</h1>
+        <div>
+          <p style="color:white">Save your soul by answering to bellow question:<br>
+            When you need me you throw me away, but when you are done with me you bring me back. <br>What am I? <br>
+
+          </p>
+        </div>
+        <div>
+          <label for="charTypeRoom3">
+            Your answer</b></label>
+          <input id="Answer3" name="Answer3" type="text" placeholder="chance to win">
+          <button onclick="" id="btnChar3" class="btn btn-success">Submit</button>
+        </div></br></br>
+        </button><img src="imag/castel/chapel priest2.jpg"  alt="four image one word guessing game" class="rounded" width="400px"
+          height="300">
+      </div>
+
+      <div id="Room3Right" class="roomRight">Pick an image, see how lucky you are today.</br><br>
+        <input id = "img5" type="image" src="imag/castel/chapel1.jpg"  alt="four image one word guessing game" onclick=""
+          class="rounded" width="280px" height="250" id="Room3Right1"></br></br>
+        <input id = "img6" type="image" src="imag/castel/chapel2.jpg"  alt="four image one word guessing game" width="280px"
+          class="rounded"  height="250" id="Room3Right2"></br></br>
+        <p class="ScoreX" id="score1">Total points: 0 out of 900 to win</p>
+      </div>
+
+    </div>
+    <!-- Room 4  -->
+    <div id="Room4" class="Room4">
+     <div id="header4">
+        <h1>The Armoury Hall</h1>
+      </div>
+      <div class="roomDescription" id="descriptionRoom4">The Armoury is a big room where the knights store their weapons, such as:<br>
+        swords, axes, shields, hammers, spears, maces, lances, scythes, long bows,<br>
+        and many others. Their armours are also kept in here. Robert, our armourer <br>
+        works in this Hall. He maintains and repairs the weapons and the armours.<br>
+        <input type="button" value="Next Room" id="toNextRoom4" class="btn btn-primary btn-lg"
+          onclick="showElement('Room5', 'Room4')"></button>
+      </div>
+    
+    
+      <div class="roomLeft"id="Room4Left">
+        <img src="imag/castel/Jester.jpg" alt="jester image" id="JosserR1" class="leftImage" width="400px">
+        <div>
+          <p id="JosserR1" class="whiteText">Choose one item from the list below,<br>let's see how lucky you are!!!
+          </p>
+        </div><br>
+        <label for="charTypeRoom1">Your choice</b></label>
+        <input id="Answer1" name="Answer1" type="text" placeholder="Click Submit once only" value="">
+        <input type="button" value="Submit" onclick="submitCharacter('Answer1','btnChar1','score1')" id="btnChar1"
+          class="btn btn-success" />
+        </br></br>
+        <div class="listOfObjects">
+          <ul>
+            <li>helmet</li><br>
+            <li>axe</li><br>
+            <li>shield</li><br>
+            <li>hammer</li><br>
+            <li>spears</li>
+          </ul>
+        </div>
+        </br></br>
+        
+      </div>
+    
+      <div id="Room4Main" class="roomMain">
+        <h1 id="Robert" #chatR1:color="white">Chat with Robert the armourer</h1>
+        <div>
+          <p style="color:white">This is your final question, adventurer. <br>
+            And hurry up, we need to sharpen the swords before the great battle. <br>
+            <b>What is a castle's stone tower called?</b> <br>
+            
+         
+        </div>
+        <div>
+          <label for="charTypeRoom4">
+            Your answer</b></label>
+          <input id="Answer4" name="Answer4" type="text">
+          <button onclick="" id="btnChar4" class="btn btn-success">Submit</button>
+        </div></br></br>
+        </button><img src="imag/castel/knight 2.png"  alt="four image one word guessing game" class="rounded" width="250px"
+          height="350">
+      </div>
+    
+      <div id="Room4Right" class="roomRight">Pick an image, see how lucky you are today.<br><br>
+        <input id = "img7" type="image" src="imag/castel/armory room.JPG"  alt="four image one word guessing game" onclick=""
+          class="rounded" width="280px" height="250" id="Room4Right1"></br></br>
+        <input id = "img8" type="image" src="imag/castel/Armory room2.jpg"  alt="four image one word guessing game" width="280px"
+          class="rounded" height="250" id="Room4Right2"></br></br>
+        <p class="ScoreX" id="score1">Total points: 0 out of 900 to win</p>
+      </div>
+
+    </div>
+    <!-- Room 5  -->
+    <div id="Room5" class="Room5">
+      <div id="header5">
+        <h1>Great Hall</h1>
+      </div>
+      <div class="roomDescription" id="descriptionRoom5">This Hall is the most important in our castle.<br>
+         This is where the social and administrative affairs are managed.<br> 
+         The King and Queen host banquets in this beautifully decorated and well-lit room.<br><br><br>
+        <input type="button" value="Restart Game" id="toNextRoom5" class="btn btn-primary btn-lg"
+          onclick="window.location.reload();"></button>
+      </div> 
+      <div class="roomLeft" id="Room5Left">
+        <img src="imag/castel/Jester.jpg" alt="jester image" id="JosserR1" class="leftImage" width="400px">
+        <div>
+          <p id="JosserR1" class="whiteText">Choose one item from the list below,<br>let's see how lucky you are!!!
+          </p>
+        </div><br>
+        <label for="charTypeRoom1">Your choice</b></label>
+        <input id="Answer9" name="Answer9" type="text" placeholder="Click Submit once only" value="">
+        <input type="button" value="Submit" onclick="submitCharacter('Answer9','btnChar9','score9')" id="btnChar9"
+          class="btn btn-success" />
+        </br></br>
+        <div class="listOfObjects">
+          <ul>
+            <li>royal seal</li><br>
+            <li>axe</li><br>
+            <li>crown</li><br>
+            <li>sceptre</li><br>
+            <li>jewellery</li>
+          </ul>
+        </div>
+      </div>
+        <div id="Room5Main" class="roomMain">
+          <h1 id="Robert" #chatR1:color="white">Chat with King Gor</h1>
+          <div>
+            <p style="color:white">This is a question from your mighty King, adventurer. <br>
+              <b>Which is the largest inhabited castle in the world?</b> <br>
+        
+        
+          </div>
+          <div>
+            <label for="charTypeRoom5">
+              Your answer</b></label>
+            <input id="Answer10" name="Answer10" type="text">
+            <button onclick="" id="btnChar4" class="btn btn-success">Submit</button>
+          </div></br></br>
+          </button><img src="imag/castel/kinf gor great hall.JPG" alt="four image one word guessing game" class="rounded" width="250px"
+            height="350">
+        </div>
+        <div id="Room45Right" class="roomRight">Pick an image, see how lucky you are today.<br><br>
+          <input id="img9" type="image" src="imag/castel/great ha_.JPG" alt="four image one word guessing game" onclick=""
+            class="rounded" width="280px" height="250" id="Room4Right1"></br></br>
+          <input id="img10" type="image" src="imag/castel/great hall.JPG" alt="four image one word guessing game" width="280px"
+            class="rounded" height="250" id="Room4Right2"></br></br>
+          <p class="ScoreX" id="score1">Total points: 0 out of 900 to win</p>
+        </div>
+        </br></br>          
+      </form>
+    </div>
+      
+    </div>
+  </div>
+
+<!-- link to external JavaScript-->
+<script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>
