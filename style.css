@@ -18,14 +18,21 @@ p
    text-align: center;
 }
 
-#special
-{
-    background-color: pink;
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
 }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 #startBtn{
     display:block;
     text-align:center;
-    margin-block: 100px;
+    margin: 20px;
     
 }
 #toNextRoom1, #toNextRoom2, #toNextRoom3, #toNextRoom4, #toNextRoom5{
@@ -52,14 +59,7 @@ p
     display:block;
     text-align:left;
 }
-.rightTopImage
-{
-    display:block;
-    text-align:right;
-    margin-left: 650px;
-    margin-block: -300px;
-    float: inline-end;
-}
+
 #img1, #img2, #img3,#img4,#img5,#img6, #img7,#img8
 {
     width:250px;
