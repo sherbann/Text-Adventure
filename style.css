@@ -1,77 +1,53 @@
-body
-{
-    background-color: lightblue;
+
+#Room1, #Room2, #Room3, #Room4, #Room5{
+    display:none;
 }
 
-
-h1
+#header1, #header2, #header3, #header4, #header5
 {
-    color:royalblue;
-    text-align: center;
+    width: 100%;
+    height:75px;
+    background-color:darkkhaki;
+    align-content: center;
+  
 }
-p
+#introCastel
 {
-    background-color: #336699;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
 }
-.middle
-{
-   text-align: center;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+ #jesterIntro
+ {
+    display: block;
+    width: 100%;
+    height: auto;
+    
 }
 
 #startBtn{
     display:block;
     text-align:center;
-    margin: 20px;
+    margin: 10px;
     
 }
 #toNextRoom1, #toNextRoom2, #toNextRoom3, #toNextRoom4, #toNextRoom5{
     float:right;
-    margin-top: -80px;
+    margin-top: 10px;
     margin-right: 20px;
+    
 }
 #skeleton{
     color:yellow;
 }
-.centerImage
+#img1, #img2, #img3,#img4,#img5,#img6, #img7,#img8, #img9,#img10
 {
-    display:block;
-    text-align:left;
-    margin-left: 5px;
-}
-.rightImage
-{
-    display:block;
-    text-align:right;
-    margin-left: 800px;
-}
-.leftImage{
-    display:block;
-    text-align:left;
+    width:100%;
+    height:230px;
+    
 }
 
-#img1, #img2, #img3,#img4,#img5,#img6, #img7,#img8
-{
-    width:250px;
-    height:250px;
-}
-.listOfObjects{
-    text-align: left;
-    color:white;
-}
-.whiteText{
-    color:white;
-}
 #Jacob, #Osfert, #Robert, #Skeleton{
     color:white;
 }
